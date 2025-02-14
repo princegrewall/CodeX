@@ -1,0 +1,12 @@
+/* nav {
+  z-index: -1;
+} */
+#sec-navbar {
+  padding-top: 3px;
+  margin: 7.5px 0px;
+  font-size: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ecf4ff !important;
+  z-index: 10;
+}

@@ -1,0 +1,125 @@
+/* .source {
+  height: 500px;
+  width: 900px;
+} */
+.language {
+  width: 150px !important;
+}
+.language {
+  display: inline;
+}
+.heading {
+  font-size: 20px;
+}
+/* #output {
+    width: 500px;
+    font-size: 20px;
+  } */
+/* body {
+    background: #8fa8af;
+  } */
+#source {
+  width: 100% !important;
+  background: #cccccc52;
+  height: 55vh;
+  font-size: 15px;
+  resize: vertical;
+}
+#input {
+  background: #cccccc52;
+  width: 45.6% !important;
+  height: 14vh;
+  resize: vertical;
+  font-size: 17px;
+  margin-left: 45px;
+  border-radius: 6px;
+}
+/* #output {
+  background: #cccccc52;
+  width: 100%;
+  height: 40vh;
+  
+  top: 7.6%;
+  font-size: 18px;
+  right: 0;
+  resize: none;
+} */
+.output-section {
+  color: aliceblue;
+  padding-left: 8px;
+  overflow-y: scroll;
+  /* background: #cccccc52; */
+  background-color: #002240;
+  width: 90vh;
+
+  height: 70vh;
+  /* position: fixed; */
+  top: 7.6%;
+  font-size: 18px;
+  right: 0;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  white-space: pre-line;
+}
+.custom-checkbox {
+  padding-left: 45px;
+}
+
+.language {
+  width: 150px;
+}
+.stdin {
+  /* background-color: rgba(240, 248, 255, 0.747); */
+
+  margin-bottom: 5px;
+}
+.expected-output {
+  /* background-color: rgba(240, 248, 255, 0.747); */
+
+  margin-bottom: 5px;
+}
+.your-output {
+  /* background-color: rgba(240, 248, 255, 0.747); */
+
+  margin-bottom: 5px;
+}
+.passed-test {
+  color: green;
+  font-size: x-large;
+
+  font-weight: 400;
+  /* background-color: rgba(240, 248, 255, 0.747);
+  font-weight: 600;
+
+  margin-bottom: 5px; */
+}
+.execution-info {
+  /* background-color: rgba(240, 248, 255, 0.747); */
+  /* font-weight: 600; */
+  margin-bottom: 5px;
+}
+.failed-test {
+  color: red;
+  font-size: x-large;
+  font-weight: 400;
+}
+/* .alignment {
+  padding-left: 5px;
+} */
+.numbers {
+  color: crimson;
+}
+.ide-size {
+  height: 60vh;
+  width: 100% !important;
+  margin-bottom: 5px;
+}
+.CodeMirror-gutters {
+  left: 0 !important;
+}
+/* .CodeMirror-linenumbers {
+  width: -29px !important;
+} */
+.CodeMirror-gutter-wrapper {
+  left: -29px !important;
+}
