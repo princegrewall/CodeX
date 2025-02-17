@@ -1,5 +1,8 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Code2 } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -9,45 +12,69 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log("Logging in with:", { email, password });
-
-    // Add API call for authentication
     navigate("/problems");
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
-        <form onSubmit={handleLogin} className="space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-2 border rounded"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-2 border rounded"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
-            Login
-          </button>
+    <div className="relative flex items-center justify-center min-h-screen bg-white">
+      <img 
+        src="https://source.unsplash.com/1600x900/?technology,coding" 
+        alt="Coding background"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
+      />
+      <div className="z-10 w-full max-w-md p-8 bg-white bg-opacity-90 rounded-xl shadow-xl text-black">
+        <div className="flex items-center justify-center mb-8">
+          <Code2 className="w-12 h-12 text-primary mr-4" />
+          <h1 className="text-3xl font-bold text-black">CodeX</h1>
+        </div>
+
+        <form onSubmit={handleLogin} className="space-y-6">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="mt-1 bg-gray-200 text-black placeholder-gray-500 border-gray-400"
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
+            <Input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="mt-1 bg-gray-200 text-black placeholder-gray-500 border-gray-400"
+            />
+          </div>
+          <div>
+            <Button type="submit" className="w-full">
+              Sign In
+            </Button>
+          </div>
         </form>
-        <p className="mt-4 text-center">
-          Don't have an account?{" "}
-          <span
-            className="text-blue-500 cursor-pointer"
-            onClick={() => navigate("/signup")}
-          >
-            Sign up
-          </span>
-        </p>
+
+        <div className="mt-6 text-center">
+          <Link to="#" className="text-sm text-primary hover:underline">
+            Forgot password?
+          </Link>
+          <p className="mt-2 text-sm text-gray-600">
+            Don't have an account?{" "}
+            <Link to="/signup" className="text-primary hover:underline">
+              Sign up
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
