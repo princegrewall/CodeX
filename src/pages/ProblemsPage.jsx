@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 const problemsList = [
@@ -10,12 +11,12 @@ const ProblemsPage = () => {
   const [problems] = useState(problemsList);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="w-screen h-screen bg-gray-900 p-8">
       <h2 className="text-3xl font-bold text-center mb-6">Problems</h2>
-      <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+      <div className="max-w-3xl mx-auto bg-black p-6 rounded-lg shadow-md">
         <table className="w-full border-collapse">
           <thead>
-            <tr className="bg-gray-200">
+            <tr className="bg-gray-900">
               <th className="p-2 text-left">Title</th>
               <th className="p-2 text-left">Difficulty</th>
             </tr>

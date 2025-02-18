@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
+    <div className="w-screen h-screen  bg-gray-900 text-white flex flex-col">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 bg-gray-800 shadow-md">
         <div className="flex items-center gap-2">
@@ -16,7 +16,7 @@ export default function HomePage() {
           </Link>
           <Link
             to="/signup"
-            className="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 transition"
+            className="bg-blue-200 px-4 py-2 rounded-md hover:bg-blue-600 transition"
           >
             Sign Up
           </Link>
@@ -30,10 +30,10 @@ export default function HomePage() {
           The ultimate coding platform to test your skills, compete with peers, and enhance your programming knowledge.
         </p>
         <div className="mt-6 flex flex-col md:flex-row gap-4">
-          <Link to="/challenges" className="bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 transition">
-            Get Started
+          <Link to="/challenges" className="bg-blue-200 px-6 py-3 rounded-md hover:bg-blue-300 transition">
+            Help
           </Link>
-          <Link to="/about" className="border border-blue-500 px-6 py-3 rounded-md hover:bg-blue-700 transition">
+          <Link to="/about" className="border border-blue-200 px-6 py-3 rounded-md hover:bg-blue-300 transition">
             Learn More
           </Link>
         </div>

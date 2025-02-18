@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import { Code2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -16,21 +16,16 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-white">
-      <img 
-        src="https://source.unsplash.com/1600x900/?technology,coding" 
-        alt="Coding background"
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-      />
-      <div className="z-10 w-full max-w-md p-8 bg-white bg-opacity-90 rounded-xl shadow-xl text-black">
+    <div className="relative flex items-center justify-center w-screen h-screen bg-gray-900">
+      <div className="z-10 w-full max-w-md p-8 bg-gray-800 bg-opacity-90 rounded-xl shadow-xl text-black">
         <div className="flex items-center justify-center mb-8">
-          <Code2 className="w-12 h-12 text-primary mr-4" />
-          <h1 className="text-3xl font-bold text-black">CodeX</h1>
+          <Code2 className="w-12 h-12  text-blue-400 mr-4" />
+          <h1 className="text-3xl font-bold text-white">CodeX</h1>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-white">
               Email
             </label>
             <Input
@@ -44,7 +39,7 @@ const LoginPage = () => {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-white">
               Password
             </label>
             <Input
